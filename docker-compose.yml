@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  tron_service:
+    build: .
+    container_name: tron_fastapi_service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
